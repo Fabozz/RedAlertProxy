@@ -1,3 +1,11 @@
+"""
+redalert_proxy.py :	Serves as a proxy between Artemis clients and server,
+			forwarding certain events to an Arduino (or other serial device)
+
+Written 2012 by Stephen Beeman, inspired by work of GitHub user "fridgehead"
+at https://github.com/fridgehead/OSCArtemis. This work is MIT licensed; license for
+original OSCArtemis work is unknown.
+"""
 import sys
 import time
 import socket
@@ -8,7 +16,7 @@ import math
 import serial
 
 
-parser = argparse.ArgumentParser("ArtemisProxy : proxy between Artemis clients and server, forwards certain events to Arduino")
+parser = argparse.ArgumentParser("redalert_proxy : proxy between Artemis clients and server, forwards certain events to Arduino")
 
 parser.add_argument("--serverip", type=str, help="Artemis server IP", default='10.0.1.4')
 parser.add_argument("--listenip", type=str, help="ip to listen for clients on", default='127.0.0.1')
